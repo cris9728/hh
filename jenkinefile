@@ -11,6 +11,7 @@ stages{
 }
 }
 }
+}
   stages('testing stage')
 {
       steps{
