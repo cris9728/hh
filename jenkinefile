@@ -6,24 +6,21 @@ stages{
      stage('compile')
      {
         steps{
-           sh 'date'
-               
-}
-}
-}
-}
+           sh 'date'       
+       }
+     }
+
   stage('testing')
-{
+  {
       steps{
           echo'hello'
-}
-}
-}
+      }
+   }
 stage('deploy')
 {
       steps{
-         echo 'hii'
-}
+         echo 'hii' 
+      }
 }
 }
 }
