@@ -1,0 +1,26 @@
+def workspace
+node
+{
+    satge('checkout')
+    {
+     
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '96ccfc20-570d-41a9-93cc-45fb055c2a9e', url: 'https://github.com/cris9728/hh.git']]])
+        workspace pwd()
+    }
+    stage('static code analysis')
+    {
+        echo "static code analysis"
+    }
+    stage('build')
+    {
+        echo "build"
+    }
+    stage('test')
+    {
+        echo "test"
+    }
+    stage('deploy')
+    {
+        echo "deploy"
+    }
+}
